@@ -75,7 +75,7 @@ if st.session_state.historial:
 
     st.download_button(
         "Descargar registros en CSV",
-        data=df.to_csv(index=False).encode("utf-8"),
+        data=df.to_csv(index=False, sep=";", decimal=",").encode("utf-8-sig"),
         file_name="mediciones_calidad_agua.csv",
         mime="text/csv"
     )
